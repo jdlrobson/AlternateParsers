@@ -1,0 +1,17 @@
+{
+	"name": "AlternateParsers",
+	"author": [
+		"Jon Robson"
+	],
+	"url": "https://www.mediawiki.org/wiki/TBC",
+	"descriptionmsg": "alt-parsers-desc",
+	"license-name": "GPL-2.0+",
+	"type": "other",
+	"AutoloadClasses": {
+		"ParserMarkdown": "includes/markdown/ParserMarkdown.php",
+		"ParserRawText": "includes/raw/ParserRawText.php",
+		"ParserParsoid": "includes/parsoid/ParserParsoid.php",
+		"ParserPurifiedHTML": "includes/purifiedHTML/ParserPurifiedHTML.php"
+	},
+	"manifest_version": 1
+}

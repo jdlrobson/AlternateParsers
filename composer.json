@@ -1,0 +1,16 @@
+{
+	"name": "mediawiki/extensions/AlternateParsers",
+	"description": "Update your wiki markup language",
+	"keywords": ["mediawiki", "wiki"],
+	"homepage": "https://www.mediawiki.org/wiki/Extension:AlternateParsers",
+	"authors": [
+		{
+			"name": "Jon Robson"
+		}
+	],
+	"license": "GPL-2.0+",
+	"require": {
+		"ezyang/htmlpurifier": "4.7.0",
+		"erusev/parsedown": "1.5.4"
+	}
+}
