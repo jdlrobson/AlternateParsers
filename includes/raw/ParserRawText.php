@@ -2,9 +2,14 @@
 /**
  * A parser that does nothing except output what you give it.
  */
-class ParserRawText implements ParserInterface {
-	public function getMessageParser() {
-		return new Parser();
+class ParserRawText implements ContentParserInterface {
+	public function replaceSection( $oldText, $sectionId, $newText ) {
+		return $newText;
+	}
+
+	// Any request for a section returns entire page.
+	public function getSection( $text, $sectionId, $defaultText = '' ) {
+		return $text;
 	}
 
 	public function preSaveTransform( $text, Title $title, User $user,

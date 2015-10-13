@@ -2,7 +2,16 @@
 /**
  * A Markdown parser for MediaWiki.
  */
-class ParserMarkdown implements ParserInterface {
+class ParserMarkdown implements ContentParserInterface {
+	public function replaceSection( $oldText, $sectionId, $newText ) {
+		return $newText;
+	}
+
+	// Any request for a section returns entire page.
+	public function getSection( $text, $sectionId, $defaultText = '' ) {
+		return $text;
+	}
+
 	public function getMessageParser() {
 		return new Parser();
 	}

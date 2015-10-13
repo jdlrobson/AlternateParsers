@@ -2,7 +2,15 @@
 /**
  * A parser that does nothing except output what you give it.
  */
-class ParserPurifiedHTML implements ParserInterface {
+class ParserPurifiedHTML implements ContentParserInterface {
+	public function replaceSection( $oldText, $sectionId, $newText ) {
+		return $newText;
+	}
+
+	// Any request for a section returns entire page.
+	public function getSection( $text, $sectionId, $defaultText = '' ) {
+		return $text;
+	}
 	public function getMessageParser() {
 		return new Parser();
 	}
